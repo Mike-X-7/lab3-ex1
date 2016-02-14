@@ -1,5 +1,5 @@
 import smtplib
-
+import getpass
 
 # fromaddr = '<email>'
 # toaddr = '<email>'
@@ -9,19 +9,25 @@ Subject: {}
 {}
 """
 
-username = 'likemike303@gmail.com'
-password = 'vzzvvvuwcilmfzzb'
+# Credentials (needed)
+# username = '<youremailaddress>' Gmail
+# #password = '{youremailapppassword}' 
 
-# fromname = 'Me-Gmail'
+# Username and password removed for privacy purposes.
+
+
+username = raw_input("Enter Username (your gmail address) to login: ")
+print "Enter your email app Password"
+password =  getpass.getpass()
+
+# fromname = 'Your-Gmail'
 # toname = 'Me-Yahoo'
 fromname = "Michael Green"
 fromaddr = username
 toname = "Michael Green"
 toaddr = "likemike11@yahoo.com"
-# subject = 'Hello world.'
-# msg = 'this is a test'
 subject = "lab3-ex1"
-msg = "Once you have it working add the script to your github account as a new repository."
+msg = "Once you have it working add the script to your github account as a new repository"
 
 messagetosend = message.format(
  fromname,
@@ -31,9 +37,6 @@ messagetosend = message.format(
  subject,
  msg)
 
-# Credentials (if needed)
-# username = '<email>'
-# #password = '{youremailapppassword}'' vzzvvvuwcilmfzzb
 
 # The actual mail send
 server = smtplib.SMTP('smtp.gmail.com:587')
