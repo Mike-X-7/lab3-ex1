@@ -27,7 +27,7 @@ fromaddr = username
 toname = "Michael Green"
 toaddr = "likemike11@yahoo.com"
 subject = "lab3-ex1"
-msg = "Once you have it working add the script to your github account as a new repository"
+msg = "lab3-ex1 completed, move on to the next exercise"
 
 messagetosend = message.format(
  fromname,
